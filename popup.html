@@ -1,0 +1,72 @@
+
+<!doctype html>
+<html>
+	<head>
+		<title>WebBibtex</title>
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+		<link rel="stylesheet" href="http://cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+		<link rel="stylesheet" href="http://cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+
+		<style type="text/css">
+			body {
+				margin: 10px;
+				white-space: nowrap;
+				min-width: 640px;
+			}
+
+			h1 {
+				font-size: 15px;
+			}
+
+			#container {
+				align-items: center;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			p {
+				margin: 0;
+				padding: 0;
+			}
+
+			progress {
+				margin-left: auto;
+				margin-right: auto;
+			}
+			pre {
+				padding-left: 1em;
+			}
+		</style>
+
+		<script src="lib/jquery-3.2.1.min.js"></script>
+		<script src="popup.js"></script>
+	</head>
+
+	<body>
+		<div class="container">
+			<h1>WebBibtex</h1>
+			<form>
+				<p>
+					<label>URL</label>
+					<input type="text" id="bibtex_url" />
+				</p>
+				<center id="bibtex_loading">
+					Finding any known entries...<br />
+					<progress id="progress"></progress>
+				</center>
+				<div id="bibtex_details">
+					<p>
+						<label>Key</label>
+						<input type="text" id="bibtex_key">
+					</p>
+					<p>
+						<label>Title</label>
+						<input type="text" id="bibtex_title" />
+					</p>
+
+					<p><pre id="bibtex_output"></pre></p>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
