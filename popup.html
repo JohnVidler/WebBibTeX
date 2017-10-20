@@ -35,6 +35,11 @@
 			}
 			pre {
 				padding-left: 1em;
+				tab-size: 4;
+			}
+
+			.right {
+				float: right;
 			}
 		</style>
 
@@ -47,29 +52,30 @@
 	<body>
 		<div class="container">
 			<h1>WebBibtex</h1>
-			<form>
+			<p>
+				<label>URL</label>
+				<input type="text" id="bibtex_url" />
+			</p>
+			<div id="bibtex_details">
 				<p>
-					<label>URL</label>
-					<input type="text" id="bibtex_url" />
+					<label>Key</label>
+					<input type="text" id="bibtex_key" placeholder="Type here to override the default key">
 				</p>
-				<center id="bibtex_loading">
-					Finding any known entries...<br />
-					<progress id="progress"></progress>
-				</center>
-				<div id="bibtex_details">
-					<p>
-						<label>Key</label>
-						<input type="text" id="bibtex_key">
-					</p>
-					<p>
-						<label>Title</label>
-						<input type="text" id="bibtex_title" />
-					</p>
+				<p>
+					<label>Title</label>
+					<input type="text" id="bibtex_title" />
+				</p>
 
-					<p><pre id="bibtex_output"></pre></p>
-				</div>
-			</form>
+				<p><pre id="bibtex_output"></pre></p>
+			</div>
+			<center id="bibtex_loading">
+				Finding any known entries...<br />
+				<progress id="progress"></progress>
+			</center>
 			<button id="bibtex_copy">Copy to Clipboard</button>
+			<div class="right">
+				<a href="http://johnvidler.co.uk" target="_blank">By John Vidler (2017)</a>
+			</div>
 		</div>
 	</body>
 </html>

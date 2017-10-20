@@ -11,8 +11,6 @@
 	},
 
 	"permissions": [
-		"activeTab",
-		"http://apps.johnvidler.co.uk/webbibtex/*",
-		"http://johnvidler.co.uk/apps/webbibtex/*"
+		"activeTab"
 	]
 }

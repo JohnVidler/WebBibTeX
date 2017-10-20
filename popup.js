@@ -1,6 +1,6 @@
 const OUTPUT_UPDATE_DELAY = 300;
 
-let bibtex = {}
+let bibtex = {};
 
 function bibtex_search() {
 	chrome.tabs.getSelected(null, function(tab) {
@@ -53,7 +53,7 @@ function bibtex_render_output() {
 		if( key === 'url' )
 			bibtexString += `\thowpublished = \{\\url\{${bibtex[key]}\}\},\n`;
 		else if( key !== 'key' )
-			bibtexString += `\t${key} = \"${bibtex[key]}\",\n`;
+			bibtexString += `\t${key} = \{${bibtex[key]}\},\n`;
 	}
 	bibtexString = bibtexString.substring(0, bibtexString.length-2);
 	bibtexString += '\n}';
@@ -98,11 +98,16 @@ function copyToClipboard(element) {
 
 chrome.runtime.onMessage.addListener(function(request, sender) {
 	if (request.action == "getSource") {
+		$( "#bibtex_loading" ).show();
 		let domRoot = $($.parseHTML(request.source));
 
 		let metaTags = domRoot.filter( "meta" );
 
 		console.log( metaTags );
+
+		let tmp = {
+			keywords: []
+		}
 
 		$.each( metaTags, function( tagId ) {
 			let key = `${$(metaTags[tagId]).attr("name") || $(metaTags[tagId]).attr("property")}`.toLowerCase();
@@ -110,40 +115,38 @@ chrome.runtime.onMessage.addListener(function(request, sender) {
 
 			value = latex_escape( value );
 
-			console.log( `${key} => ${value}` );
+			console.log( metaTags[tagId] );			
 
-			let tmp = {
-				keywords: []
+			if( value !== 'undefined' ) {
+				if( key === "keywords" || key === "keyword" || key == "tags" ) {
+					tmp.keywords = tmp.keywords.concat( list_split(value) );
+				}
+				else if( key === "description" || key === "abstract" )
+					bibtex.abstract = value;
+				else if( key === "author" || key === "article:author" || key === "blogger_name" )
+					bibtex.author = value;
+				else if( key === "og:site_name" )
+					bibtex.publisher = value;
+				else if( key === "published_at" ) {
+					let date = moment( value );
+					bibtex.year = date.format( "YYYY" );
+					bibtex.month = date.format( "MMMM" );
+				}
+				//else
+					//bibtex[key] = value;
 			}
-
-			if( key === "keywords" || key === "keyword" || key == "tags" ) {
-				tmp.keywords = tmp.keywords.concat( list_split(value) );
-			}
-			else if( key === "description" || key === "abstract" )
-				bibtex.abstract = value;
-			else if( key === "author" || key === "article:author" || key === "blogger_name" )
-				bibtex.author = value;
-			else if( key === "og:site_name" )
-				bibtex.publisher = value;
-			else if( key === "published_at" ) {
-				let date = moment( value );
-				bibtex.year = date.format( "YYYY" );
-				bibtex.month = date.format( "MMMM" );
-			}
-			//else
-				//bibtex[key] = value;
-
-
-			if( tmp.keywords.length > 0 )
-				bibtex.keywords = tmp.keywords.join(" ");
-
 		} );
 
+		if( tmp.keywords.length > 0 )
+			bibtex.keywords = tmp.keywords.join(" ");
+
+		$( "#bibtex_loading" ).hide();
 		bibtex_update_output();
 	}
 });
 
 function onWindowLoad() {
+	$( "#bibtex_loading" ).show();
 	var message = document.querySelector('#message');
 
 	chrome.tabs.executeScript(null, {
