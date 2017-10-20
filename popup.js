@@ -1,3 +1,12 @@
+/*
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License Version 3 for more details.
+
+	Copyright (C) 2017 John Vidler
+*/
+
 const OUTPUT_UPDATE_DELAY = 300;
 
 let bibtex = {};
