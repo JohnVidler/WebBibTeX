@@ -3,7 +3,7 @@
 
 	"name": "WebBibtex",
 	"description": "Binds web addresses to Bibtex entries",
-	"version": "1.0",
+	"version": "1.0.1",
 
 	"browser_action": {
 		"default_icon": "icon.png",
