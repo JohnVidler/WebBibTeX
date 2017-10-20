@@ -8,7 +8,8 @@ Still very 'beta' - but if you want to try it:
 2. Unpack the zip to a folder somewhere (doesn't matter where)
 3. Navigate to chrome://extensions and turn on 'Developer Mode'
 4. Select 'Load Unpacked Extension' and point it at the folder you unpacked the zip to
-5. Done!
+5. (Optional) Uncheck 'Developer Mode' - otherwise Chrome will complain each time you open it.
+6. Done!
 
 ## Usage
 Press the new button in the Chrome toolbar to pop up the interface, edit keys and title to taste, then use
