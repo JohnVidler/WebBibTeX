@@ -21,3 +21,16 @@ Ironically; it doesn't work on my own site! Ha.
 
 ## Improvements
 I'll probably be toying with this for a bit, but feel free to post pull requests for new additions.
+
+## Output
+This page currently (20/10/2017) produces this output:
+
+```
+@misc{johnvidlerwebbibtex,
+	howpublished = {\url{https://github.com/JohnVidler/WebBibTeX}},
+	title = {JohnVidler/WebBibTeX: A Chrome Extension to autogenerate BibTeX entries for web articles},
+	note = {[Online; retrieved 20th October 2017]},
+	publisher = {GitHub},
+	abstract = {WebBibTeX - A Chrome Extension to autogenerate BibTeX entries for web articles}
+}
+```
