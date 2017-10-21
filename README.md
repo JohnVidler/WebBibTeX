@@ -3,6 +3,8 @@ A Chrome Extension to autogenerate BibTeX entries for web articles.
 
 It does it in an extremely dumb way, but seems to get pretty good results from major outlets and sites using common CMS backends.
 
+![An animation showing the WebBibTeX popup working](https://raw.githubusercontent.com/JohnVidler/WebBibTeX/resource/anim/WebBibTeX.gif)
+
 ## Installation
 Still very 'beta' - but if you want to try it:
 
