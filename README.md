@@ -37,3 +37,43 @@ This page currently (20/10/2017) produces this output:
 	abstract = {WebBibTeX - A Chrome Extension to autogenerate BibTeX entries for web articles}
 }
 ```
+
+A BBC News Article:
+```
+@misc{tech,
+	howpublished = {\url{http://www.bbc.co.uk/news/technology-41694991}},
+	title = {Tech Tent: Will AI and Blockchain be game-changers? - BBC News},
+	note = {[Online; retrieved 21st October 2017]},
+	abstract = {On the tech podcast this week, Rory looks at how Google's Deep Mind program continues to improve.},
+	publisher = {BBC News},
+	author = {https://www.facebook.com/bbcnews}
+}
+```
+(Yeah, for some reason the BBC declare their 'author' to be their facebook page. Weird...)
+
+Engadget UK
+```
+@misc{designing,
+	howpublished = {\url{https://www.engadget.com/2017/10/20/designing-the-technology-of-blade-runner-2049/}},
+	title = {Designing the technology of ‘Blade Runner 2049’},
+	note = {[Online; retrieved 21st October 2017]},
+	abstract = {This article contains spoilers for 'Blade Runner 2049'   There's a scene in Blade Runner 2049 that takes place in a morgue. K, an android "replicant" played by...},
+	author = {Nick Summers},
+	publisher = {Engadget},
+	year = {2017},
+	month = {October},
+	keywords = {av bladerunner bladerunner2049 DenisVilleneuve entertainment film interface longread movie sciencefiction specialeffects territorystudios ui vfx}
+}
+```
+
+Aeon.co
+```
+@misc{sugar,
+	howpublished = {\url{https://aeon.co/essays/sugar-is-a-toxic-agent-that-creates-conditions-for-disease?ref=}},
+	title = {Sugar is a toxic agent that creates conditions for disease | Aeon Essays},
+	note = {[Online; retrieved 21st October 2017]},
+	publisher = {Aeon},
+	abstract = {A potent toxin that alters hormones and metabolism, sugar sets the stage for epidemic levels of obesity and diabetes},
+	author = {https://www.facebook.com/AeonMagazine}
+}
+```
