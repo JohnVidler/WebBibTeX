@@ -25,6 +25,14 @@ Ironically; it doesn't work on my own site! Ha.
 ## Improvements
 I'll probably be toying with this for a bit, but feel free to post pull requests for new additions.
 
+ToDo:
+ - Add URL autodetection for all fields, so URLs can be escaped automagically
+ - Add settings page for variations
+   - Quotes vs. Braces
+   - Keyword delimiter
+ - Keyword de-duplication
+ - "Append to library" option, saving to a local file
+
 ## Output
 This page currently (20/10/2017) produces this output:
 
