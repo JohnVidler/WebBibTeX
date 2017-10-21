@@ -38,7 +38,7 @@ This page currently (20/10/2017) produces this output:
 }
 ```
 
-A BBC News Article:
+### A BBC News
 ```
 @misc{tech,
 	howpublished = {\url{http://www.bbc.co.uk/news/technology-41694991}},
@@ -51,7 +51,7 @@ A BBC News Article:
 ```
 (Yeah, for some reason the BBC declare their 'author' to be their facebook page. Weird...)
 
-Engadget UK
+### Engadget UK
 ```
 @misc{designing,
 	howpublished = {\url{https://www.engadget.com/2017/10/20/designing-the-technology-of-blade-runner-2049/}},
@@ -66,7 +66,7 @@ Engadget UK
 }
 ```
 
-Aeon.co
+### Aeon.co
 ```
 @misc{sugar,
 	howpublished = {\url{https://aeon.co/essays/sugar-is-a-toxic-agent-that-creates-conditions-for-disease?ref=}},
