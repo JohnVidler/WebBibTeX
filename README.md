@@ -1,7 +1,11 @@
 # WebBibTeX
 A Chrome Extension to autogenerate BibTeX entries for web articles.
 
-It does it in an extremely dumb way, but seems to get pretty good results from major outlets and sites using common CMS backends.
+I don't charge for a bunch of my software. Like what I'm doing? Buy me a coffee! [![paypal](https://www.paypal.com/en_GB/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XX9FV3M96BXEC)
+
+## Demo
+
+The data pulled from websites is retrieved in an entirely dumb way, but seems to get pretty good results from major outlets and sites using common CMS backends. I'm using this myself, so if I find other weird edge cases I'll put the extra retrieval methods in here too.
 
 ![An animation showing the WebBibTeX popup working](https://raw.githubusercontent.com/JohnVidler/WebBibTeX/resource/anim/WebBibTeX.gif)
 
